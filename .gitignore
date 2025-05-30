@@ -1,24 +1,41 @@
+# Node.js / npm
+node_modules/
+npm-debug.log*
+yarn-error.log
+package-lock.json # NO ignores este archivo si usas npm, es importante. Lo comento para recordarlo.
+# Si package-lock.json está comentado arriba, significa que SÍ debe ser versionado.
+
+# Build output
+dist/
+build/
+.parcel-cache/
+
+# Archivos de entorno (si los usaras para claves API locales, etc.)
+.env
+.env.local
+.env.*.local
+!.env.example
+
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Archivos de sistema operativo
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Carpeta o archivo 'npm' si es generado y no parte del código fuente
+/npm
+npm/
+
+# Archivos temporales de esbuild
+esbuild-*.log
