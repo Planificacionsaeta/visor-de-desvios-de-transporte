@@ -88,15 +88,7 @@ const App: React.FC = () => {
     return corridorMatch && lineMatch;
   }).sort((a, b) => new Date(b.publicationDate).getTime() - new Date(a.publicationDate).getTime());
   
-  useEffect(() => {
-    if (process.env.API_KEY) {
-      console.log("API_KEY for Gemini is available (not used in this app version).");
-    } else {
-      console.warn("API_KEY for Gemini is NOT configured in environment variables.");
-    }
-  }, []);
-
-  return (
+   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Header onToggleAdmin={toggleAdminView} isAdminView={isAdminView} />
       <main className="container mx-auto p-4 sm:p-6 lg:p-8 flex-grow w-full">
